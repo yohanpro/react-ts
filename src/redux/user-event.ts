@@ -1,4 +1,4 @@
-import { AnyAction } from "redux";
+import { AnyAction } from 'redux';
 
 interface UserEvent {
   id: number;
@@ -12,12 +12,15 @@ interface UserEventsState {
   allIds: UserEvent['id'][];
 }
 
-const initialState:UserEventsState{
-    byIds: { },
-    allIds:[]
-}
+const initialState: UserEventsState = {
+  byIds: {},
+  allIds: [],
+};
 
-const userEventReducer = (state:UserEventsState=initialState, action:AnyAction) => {
+const userEventReducer = (
+  state: UserEventsState = initialState,
+  action: AnyAction
+) => {
   switch (action.type) {
     default:
       return state;
